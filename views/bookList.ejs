@@ -1,0 +1,38 @@
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        .center {
+            text-align: center;
+            margin: auto;
+            width: 50%;
+        }
+        h1 {
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">Book List</h1>
+    <table class="center">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Written</th>
+            <th>Edition</th>
+            <th>Price</th>
+        </tr>
+        <% books.forEach(item => {%>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.title %></td>
+                <td><%= item.author %></td>
+                <td><%= item.year_written %></td>
+                <td><%= item.edition %></td>
+                <td><%= item.price %></td>
+            </tr>
+        <% })%>
+    </table>
+</body>
